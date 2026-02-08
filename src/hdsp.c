@@ -189,7 +189,7 @@ hdsp_status_t hdsp_downsample_int16(int16_t *x, size_t x_len, int downsample_fac
 
     size_t i = 0;
     size_t j = 0;
-    while (i < x_len)
+    while ((i < x_len) && (j < y_len))
     {
         y[j] = x[i];
         j = j + 1;
@@ -216,7 +216,7 @@ hdsp_status_t hdsp_downsample_double(double *x, size_t x_len, int downsample_fac
 
     size_t i = 0;
     size_t j = 0;
-    while (i < x_len)
+    while ((i < x_len) && (j < y_len))
     {
         y[j] = x[i];
         j = j + 1;
@@ -243,7 +243,7 @@ hdsp_status_t hdsp_downsample_float(float *x, size_t x_len, int downsample_facto
 
     size_t i = 0;
     size_t j = 0;
-    while (i < x_len)
+    while ((i < x_len) && (j < y_len))
     {
         y[j] = x[i];
         j = j + 1;
